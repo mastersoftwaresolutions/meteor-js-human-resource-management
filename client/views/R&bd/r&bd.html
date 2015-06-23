@@ -1,0 +1,200 @@
+<template name="rbd">
+    <div class="container">
+        
+        <form method="post" id="rbd_form">
+            
+              <div style="margin-top:1%;width:96%;">
+         <div class="alert alert-info" id="login-error2" style="display:none;">
+    <button type="button" class="close" style=margin-right:3%;>×</button>
+    please select Responsible Person
+</div>
+            </div>
+                         <div class="alert-messages2 text-center">
+        </div>
+         {{#if rbddocs}}     
+     {{#each rbddocs}}
+        <table class="hr_table">
+            <tr>
+                <td>
+                    Responsible Person :
+                </td>
+                <td>
+        <select class="form-control" placeholder="select employee name" id="res_name" style="margin-left:-26%; width:70%;" >
+                        <option value="">
+                            select Responsible Person
+                        </option>
+                        
+                        {{#each employee}}
+                        
+                        <option {{isMyoptionSelected ename ../res_person}}>
+                            {{ename}}
+                        </option>
+                        {{/each}}
+                    
+                    </select>
+                </td>
+            </tr>
+       
+          <tr>
+                <td>
+                    Create Biddle Account
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                
+                    <input class="onoffswitch-checkbox" type="checkbox" name='ans1' {{isMyCheckboxChecked ans1}} id="Biddle">
+                        <label class="onoffswitch-label" for="Biddle">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                    
+                </td>
+          </tr>
+            <tr>
+                <td>
+                    Cover Letter / All relevant data
+                </td>
+                <td>
+                      <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">  
+                    <input class="onoffswitch-checkbox" type="checkbox" name='ans2' {{isMyCheckboxChecked ans2}} id="Cover">
+                          <label class="onoffswitch-label" for="Cover">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+            
+                </td>
+          </tr>
+                <tr>
+                <td>
+                    Google Drive Access
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                    <input class="onoffswitch-checkbox" type="checkbox" name='ans3' {{isMyCheckboxChecked ans3}} id="Google">
+                          <label class="onoffswitch-label" for="Google">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                    
+                </td>
+          </tr>
+                  <tr>
+                        
+                         <td>
+                            {{#each employee1}}
+                            <input type="hidden" value="{{eid}}" id="empid">
+                           {{/each}}
+                         </td>
+                      
+                     </tr>
+                <tr>
+                        <td></td>
+                        <td><input type="submit" class="btn btn-info btn-lg save1" value="save" ></td>
+                        <td><a href="../"><button type="button" class="btn btn-info btn-lg back1 ">back</button></a></td>
+                    </tr>    
+        </table>
+         {{/each}}
+         {{else}}
+         
+         <table class="hr_table">
+            <tr>
+                <td>
+                    Responsible Person :
+                </td>
+                <td>
+        <select class="form-control" placeholder="select employee name" id="res_name" style="margin-left:-26%; width:70%;">
+                        <option value="">
+                            select Responsible Person
+                        </option >
+                        
+                        {{#each employee}}
+                        
+                        <option {{isMyoptionSelected ename ../res_person}}>
+                            {{ename}}
+                        </option>
+                        {{/each}}
+                    
+                    </select>
+                </td>
+            </tr>
+       
+          <tr>
+                <td>
+                    Create Biddle Account
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">                
+                    <input class="onoffswitch-checkbox" type="checkbox" name='ans1' id="Biddle">
+                           <label class="onoffswitch-label" for="Biddle">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                    
+                </td>
+          </tr>
+            <tr>
+                <td>
+                    Cover Letter / All relevant data
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">                        
+                    <input class="onoffswitch-checkbox" type="checkbox" name='ans2' id="Cover" >
+                           <label class="onoffswitch-label" for="Cover">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+            
+                </td>
+          </tr>
+                <tr>
+                <td>
+                    Google Drive Access
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                    <input class="onoffswitch-checkbox" type="checkbox" name='ans3' id="Google">
+                           <label class="onoffswitch-label" for="Google">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                    
+                </td>
+          </tr>
+                  <tr>
+                        
+                         <td>
+                            {{#each employee1}}
+                            <input type="hidden" value="{{eid}}" id="empid">
+                           {{/each}}
+                         </td>
+                      
+                     </tr>
+                <tr>
+                        <td></td>
+                        <td><input type="submit" class="btn btn-info btn-lg save1" value="save" ></td>
+                        <td><a href="../"><button type="button" class="btn btn-info btn-lg back1 ">back</button></a></td>
+                    </tr>    
+        </table>
+           {{/if}}
+        </form>
+      
+    </div>
+</template>

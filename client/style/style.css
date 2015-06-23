@@ -1,0 +1,202 @@
+.employee_div{
+    width: 250px;
+    margin: 0 auto;
+}
+.margin_top{
+    margin-top:10px;
+    width:150px;
+    margin-left:auto;
+    margin-right: auto;
+}
+.border{
+   border: 1px solid #cccccc;
+    color: #31b0d5;
+    margin-top: 4%;
+    padding: 1em;
+    text-align: center;
+}
+.margin_top10{
+    margin-top:10px;
+    margin-left:auto;
+    margin-right: auto;
+}
+.float_right{
+    float: right;
+}
+.filt_lable{
+    padding: 10px;
+    font:20px;
+}
+.hr_table{
+    margin-top:40px;
+    margin-left: 21%;
+}
+.hr_table td,tr{
+    padding:10px;
+    font-size: 21px;
+    
+}
+.doc_table{
+     float: left;
+    margin-left: 4%;
+    margin-top: 20px;
+    width: 441px;
+}
+.doc_table tr,td{
+    padding:10px;
+    
+    
+}
+.doc_table_right{
+   float: left;
+    margin-left: 60px;
+    margin-top: 20px;
+    width: 585px;
+}
+.doc_table_right tr,td{
+    padding:10px;
+    
+    
+}
+.header1
+{
+    background-color:#31B0D5;
+    padding:1%;
+    margin-top:-1%;
+    color:#FFFFFF;
+}
+.search{
+    margin-top:18%;margin-left:8%;
+}
+
+.view{
+line-height: 0.55;
+}
+.tab1{
+    font-size:22px;
+    margin-left:7%!important;
+    margin-top: 1%;
+    width: 86.5%;
+     background-color: #ecebea;
+    margin-left:1%;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    background-color: #31B0D5;
+    color: #fff;
+}
+.con{
+    background-color: #fcfcfc;
+}
+.save{
+     margin-left: 40%;
+    margin-top: -286%;
+    line-height: 0.55;
+}
+.back{
+      margin-left: -1065%;
+    margin-top: -851%;
+    line-height: 0.55;
+}
+.save1
+{
+    line-height: 0.55;
+    margin-top:-178%;margin-left:75%;
+}
+.back1{
+    line-height: 0.55;
+    margin-left:-1072%;
+    margin-top: -690%;
+}
+.save2{
+     margin-top:-990%;
+     margin-left:-84%;
+    line-height: 0.55;
+}
+.back2{
+ line-height: 0.55;
+   margin-left: -1349%;
+    margin-top: -1650%;
+}
+.save3{
+      line-height: 0.55;
+      margin-top: -713%;
+      margin-left:-56%;
+}
+.back3{
+    line-height: 0.55;
+     margin-left: -1333%;
+    margin-top: -1794%;
+}
+.back4{
+    line-height: 0.55;
+    margin-left: -1333%;
+    margin-top: -1621%;
+}
+.save4{
+    line-height: 0.55;
+    margin-left: -56%;
+    margin-top: -662%;
+}
+ div.alert-messages {
+       font-size:21px;
+       color:#31B0D5;
+        
+    }
+     div.alert-messages1 {
+       font-size:21px;
+       color:#31B0D5;
+        
+    }
+     div.alert-messages2 {
+       font-size:21px;
+       color:#31B0D5;
+        
+    }
+     div.alert-messages4{
+       font-size:21px;
+       color:#31B0D5;
+        
+    }
+.back5{
+
+ line-height: 0.55;
+    margin-left: -1333%;
+    margin-top: -1795%;
+}
+.save5{
+line-height: 0.55;
+    margin-left: -56%;
+    margin-top: -715%;
+}
+.saveas{
+margin-top:-646%;
+line-height: 0.55;
+margin-left:-52%;
+}
+
+.float_right {
+    float: right;
+    margin-right: 13%;
+    margin-top: -3%;
+}
+.check{
+    margin-left:7%;
+
+}
+.pending{
+    margin-left:31%;
+    margin-top:-20%;
+}
+.complete{
+    margin-left:29%;
+    margin-top:-18%;
+}
+.all{
+    margin-left:54%;
+    margin-top:-42%
+}
+.tb{
+  margin-top:3%;
+}
+

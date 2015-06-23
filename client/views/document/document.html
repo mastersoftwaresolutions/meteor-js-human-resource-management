@@ -1,0 +1,607 @@
+<template name="document">
+    <div class="container">   
+<form method="post" id="document_form">
+    
+    <div style="margin-top:1%; width:96%">
+         <div class="alert alert-info" id="login-error1" style="display:none;">
+    <button type="button" class="close" style=margin-right:3%;>×</button>
+    please select Responsible Person
+</div>
+                </div>
+                <div class="alert-messages1 text-center">
+        </div>
+     {{#if documentdocs}}
+     {{#each documentdocs}}
+            <div style="margin-left:20%;margin-top:4%;">
+            <tr>
+                <td>
+                    Responsible Person :
+                </td>
+                <td>
+                    <select class="form-control" placeholder="select employee name" id="res_name">
+                        <option value="">
+                            select employee name
+                        </option>
+                           {{#each employee}}
+                        <option {{isMyoptionSelected ename ../res_person}}>
+                            {{ename}}
+                        </option>
+                        {{/each}}
+                    </select>
+                </td>
+            </tr>
+            </div>
+        <table class="doc_table">
+          
+          <tr>
+                <td>
+                    Copy of Offer Letter Given
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                    <input class="onoffswitch-checkbox" type="checkbox" name="Answ1" {{isMyCheckboxChecked ans1}} id="Offer">
+                            <label class="onoffswitch-label" for="Offer">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+          </tr>
+            <tr>
+                <td>
+                    ID Proof
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                 <input class="onoffswitch-checkbox" type="checkbox" name="Answ2" {{isMyCheckboxChecked ans2}} id="Proof">
+                    <label class="onoffswitch-label" for="Proof">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+          </tr>
+                <tr>
+                <td>
+                    Address Proof
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                   <input class="onoffswitch-checkbox" type="checkbox" name="Answ3" {{isMyCheckboxChecked ans3}} id="Address Proof">
+                    <label class="onoffswitch-label" for="Address Proof">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+          </tr>
+                    <tr>
+                <td>
+                    Date of Birth certificate
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                   <input class="onoffswitch-checkbox" type="checkbox" name="Answ4" {{isMyCheckboxChecked ans4}} id="Birth">
+                    <label class="onoffswitch-label" for="Birth">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+          </tr>
+                    <!--     <tr>
+                <td>
+                    Date of Birth certificate
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                 <input class="onoffswitch-checkbox" type="checkbox" name="Answ5" {{isMyCheckboxChecked ans5}} id="Birth1">
+                    <label class="onoffswitch-label" for="Birth1">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+                         </tr>-->
+                              <tr>
+                <td>
+                    Training Certificate if Fresher
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                   <input class="onoffswitch-checkbox" type="checkbox" name="Answ6" {{isMyCheckboxChecked ans6}} id="Training">
+                    <label class="onoffswitch-label" for="Training">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Last 3 Salary Slips
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                     <input class="onoffswitch-checkbox" type="checkbox" name="Answ7" {{isMyCheckboxChecked ans7}} id="Salary">
+                        <label class="onoffswitch-label" for="Salary">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+            </tr>
+               <tr>
+                <td>
+                    
+                    Passport Size Photographs 8
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                  <input class="onoffswitch-checkbox" type="checkbox" name="Answ8" {{isMyCheckboxChecked ans8}} id="Passport">
+                    <label class="onoffswitch-label" for="Passport">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+            </tr>
+
+             <tr>
+                <td>
+                   Qualification Certificates
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                <input class="onoffswitch-checkbox" type="checkbox" name="Answ9" {{isMyCheckboxChecked ans9}} id="Qualification">
+                    <label class="onoffswitch-label" for="Qualification">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+          </tr>
+        </table>
+        
+        <table class="doc_table_right">
+         
+       
+         
+            <tr>
+                <td>
+                    Experience/Relieving letter from previous organization
+
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                  <input class="onoffswitch-checkbox" type="checkbox" name="Answ10" {{isMyCheckboxChecked ans10}} id="Experience">
+                    <label class="onoffswitch-label" for="Experience">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+          </tr>
+                <tr>
+                <td>
+                    Medical Certificate & Fitness Certificate
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                <input class="onoffswitch-checkbox" type="checkbox" name="Answ11" {{isMyCheckboxChecked ans11}} id="Medical">
+                    <label class="onoffswitch-label" for="Medical">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+          </tr>
+                    <tr>
+                <td>
+                    Bank Account Number
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+              <input class="onoffswitch-checkbox" type="checkbox" name="Answ12" {{isMyCheckboxChecked ans12}} id="Bank">
+                <label class="onoffswitch-label" for="Bank">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+          </tr>
+                         <tr>
+                <td>
+                   Joining Report of New Employees
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                   <input class="onoffswitch-checkbox" type="checkbox" name="Answ13" {{isMyCheckboxChecked ans13}} id="Joining">
+                    <label class="onoffswitch-label" for="Joining">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+                         </tr>
+                              <tr>
+                <td>
+                    Code of Conduct and Ethical Standards
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                  <input class="onoffswitch-checkbox" type="checkbox" name="Answ14" {{isMyCheckboxChecked ans14}} id="Code">
+                    <label class="onoffswitch-label" for="Code">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Employee Agreement
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                  <input class="onoffswitch-checkbox" type="checkbox" name="Answ15" {{isMyCheckboxChecked ans15}} id="Employee">
+                    <label class="onoffswitch-label" for="Employee">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+            </tr>
+               <tr>
+                <td>
+                   Acknowledgement of Appointment Letter
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                  <input class="onoffswitch-checkbox" type="checkbox" name="Answ16" {{isMyCheckboxChecked ans16}} id="Acknowledgement">
+                    <label class="onoffswitch-label" for="Acknowledgement">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+            </tr>
+                <tr>
+                        {{#each employee1}}
+                        <td><input type="hidden" value="{{eid}}" id="empid"></td>
+                    {{/each}}
+                    </tr>
+                <tr>
+                        <td></td>
+                        <td><input type="submit" class="btn btn-info btn-lg save2" value="save" ></td>
+                        <td><a href="../"><button type="button" class="btn btn-info btn-lg back2 ">back</button></a></td>
+                    </tr>
+              
+        </table>
+          {{/each}}
+          {{else}}
+          <div style="margin-left:20%;margin-top:4%;">
+                    <tr>
+                <td>
+                    Responsible Person :
+                </td>
+                <td>
+                    <select class="form-control" placeholder="select employee name" id="res_name">
+                        <option value="">
+                            select employee name
+                        </option>
+                           {{#each employee}}
+                        <option >
+                            {{ename}}
+                        </option>
+                        {{/each}}
+                    </select>
+                </td>
+            </tr>
+          </div>
+        <table class="doc_table">
+          
+          <tr>
+                <td>
+                    Copy of Offer Letter Given
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                    <input class="onoffswitch-checkbox" type="checkbox" name="Answ1" id="Copy" >
+                        <label class="onoffswitch-label" for="Copy">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+          </tr>
+            <tr>
+                <td>
+                    ID Proof
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                 <input class="onoffswitch-checkbox" type="checkbox" name="Answ2" id="Proof" >
+                    <label class="onoffswitch-label" for="Proof">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+          </tr>
+                <tr>
+                <td>
+                    Address Proof
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                   <input class="onoffswitch-checkbox" type="checkbox" name="Answ3" id="Address" >
+                    <label class="onoffswitch-label" for="Address">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+          </tr>
+                    <tr>
+                <td>
+                    Date of Birth certificate
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                   <input class="onoffswitch-checkbox" type="checkbox" name="Answ4" id="Birth" >
+                    <label class="onoffswitch-label" for="Birth">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+          </tr>
+                   <!--      <tr>
+                <td>
+                    Date of Birth certificate
+                </td>
+                <td>
+                 <input class="toggle-one" type="checkbox" name="Answ5" >
+                </td>
+                         </tr>-->
+                              <tr>
+                <td>
+                    Training Certificate if Fresher
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                   <input class="onoffswitch-checkbox" type="checkbox" name="Answ6" id="Training">
+                    <label class="onoffswitch-label" for="Training">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Last 3 Salary Slips
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                     <input class="onoffswitch-checkbox" type="checkbox" name="Answ7" id="Salary" >
+                        <label class="onoffswitch-label" for="Salary">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+            </tr>
+               <tr>
+                <td>
+                    Passport Size Photographs 8
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                  <input class="onoffswitch-checkbox" type="checkbox" name="Answ8" id="Passport" >
+                    <label class="onoffswitch-label" for="Passport">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+            </tr>
+               <tr>
+                <td>
+                   Qualification Certificates
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                <input class="onoffswitch-checkbox" type="checkbox" name="Answ9" id="Qualification" >
+                    <label class="onoffswitch-label" for="Qualification">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+          </tr>
+        </table>
+        
+        <table class="doc_table_right">
+         
+       
+         
+            <tr>
+                <td>
+                    Experience/Relieving letter from previous organization
+
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                  <input class="onoffswitch-checkbox" type="checkbox" name="Answ10" id="Experience" >
+                    <label class="onoffswitch-label" for="Experience">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+          </tr>
+                <tr>
+                <td>
+                    Medical Certificate & Fitness Certificate
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                <input class="onoffswitch-checkbox" type="checkbox" name="Answ11" id="Medical">
+                    <label class="onoffswitch-label" for="Medical">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+          </tr>
+                    <tr>
+                <td>
+                    Bank Account Number
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+              <input class="onoffswitch-checkbox" type="checkbox" name="Answ12" id="Bank">
+                <label class="onoffswitch-label" for="Bank">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+          </tr>
+                         <tr>
+                <td>
+                   Joining Report of New Employees
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                   <input class="onoffswitch-checkbox" type="checkbox" name="Answ13" id="Joining">
+                    <label class="onoffswitch-label" for="Joining">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+                         </tr>
+                              <tr>
+                <td>
+                    Code of Conduct and Ethical Standards
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                  <input class="onoffswitch-checkbox" type="checkbox" name="Answ14" id="Code" >
+                    <label class="onoffswitch-label" for="Code">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Employee Agreement
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                  <input class="onoffswitch-checkbox" type="checkbox" name="Answ15" id="Agreement">
+                    <label class="onoffswitch-label" for="Agreement">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+            </tr>
+               <tr>
+                <td>
+                   
+                   Acknowledgement of Appointment Letter
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                  <input class="onoffswitch-checkbox" type="checkbox" name="Answ16" id="Acknowledgement" >
+                    <label class="onoffswitch-label" for="Acknowledgement">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+            </tr>
+                <tr>
+                        {{#each employee1}}
+                        <td><input type="hidden" value="{{eid}}" id="empid"></td>
+                    {{/each}}
+                    </tr>
+                <tr>
+                        <td></td>
+                         <td><input type="submit" class="btn btn-info btn-lg save2" value="save" ></td>
+                        <td><a href="../"><button type="button" class="btn btn-info btn-lg back2 ">back</button></a></td>
+                    </tr>
+        </table>
+          {{/if}}
+          
+       </form>              
+    </div>
+</template>

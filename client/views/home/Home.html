@@ -1,0 +1,203 @@
+<head>
+  <title>HRM</title>
+     <link href="https://gitcdn.github.io/bootstrap-toggle/2.1.0/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.1.0/js/bootstrap-toggle.min.js"></script>
+  
+</head>
+
+<body>
+  <header>
+    <div class="header1">
+   <div class="page-header1 text-center">
+   <h2>Human Resource Management</h2>
+  </div>
+   </div>
+  </header>
+<div style="clear:both"></div>
+
+</body>
+
+<template name="employee">
+<!--  <div class="container">
+      <div class="employee_div">
+<div  class="form-group" style="margin-top:80px;">
+  <label>Employee Name</label>
+<select class="form-control" placeholder="select employee name" id="ename">
+  <option>select employee name</option>
+  {{#each employee}}
+  <option>{{ename}}</option>
+  <input type="hidden" value="{{eid}}" class="{{ename}}">
+  {{/each}}
+</select>
+
+<button class="btn btn-info btn-lg" id="init_join">
+  <span class="glyphicon glyphicon-search">Intiate Joining</span>
+  
+
+</button>
+<button class="btn btn-warning margin_top">Initiate Relieving</button>
+</div>
+</div>-->
+
+  
+  
+     <div class="col-md-4" style="margin-left:32%;">
+      <div class="col-md-4">
+  
+  </div>
+
+     
+      <p class="page-header">Select Employee</p> 
+      <div class="form-group">
+      <select class="form-control" placeholder="select employee name" id="ename">
+       <option selected="selected">---Select Employee--</option>
+       {{#each employee}}
+        <option >{{ename}}</option>
+         <input type="hidden" value="{{eid}}" class="{{ename}}">
+       {{/each}}
+      </select>
+      </div>
+      <div>
+        <button class="btn btn-info btn-lg" id="init_join">
+          <span class="glyphicon glyphicon-search"></span>
+          Intiate Joining
+        </button>
+        <button class="btn btn-info btn-lg">
+         <span class="glyphicon glyphicon-search"></span>
+         Intiate Relieving
+        </button>
+      </div>
+     </div>
+     
+  <div class="search">
+  <label for="search">
+			
+		</label>
+		<input style="height:2%" type="text" placeholder="SEARCH" id="search" />
+                </div>
+               
+  
+ {{> employee_document_table}} 
+</template>
+<template name="employee_document_table">
+
+ <div class="float_right">
+     <label class="filt_lable">
+           <div class="check">
+           <input type="checkbox" class="show" value="pending"  name="other" id="one">
+	   </div>
+	   <div class="pending">Pending</div>
+     </label>
+     <label class="filt_lable">
+          <div class="check">
+          <input type="checkbox" class="show" value= "complete" name="other" id="two">
+	  </div>
+	  <div class="complete" >Complete</div>
+     </label>
+      <label class="filt_lable">
+	 <div class="check">
+	 <input checked type="checkbox" class="show" value="all" name="other" id="three">
+	 </div>
+	 <div class="all"> All</div>
+      </label>
+   </div>
+  <div class="container">
+    <!--{{> filter}}-->
+    <div style="clear:both"></div>
+  <h4 class="border">Employee Status</h4>
+    <table class="table table-bordered tb" id="tblData">
+      <tr>
+<th>Employee Id</th><th>Employee Name</th><th>Pending Section</th><th>Status</th><th>Action</th>
+
+</tr>
+{{#each employname}}
+       <tr class="{{status eid}} checkbox1 all">
+<td>{{eid}}</td>
+<td>{{ename}}</td>
+<td>{{doc_status eid}}</td>
+<td>{{pending eid}}{{status eid}}</td>
+<td><button class="btn btn-info btn-lg view" id="action" style=" line-height: 0.55;"> <span class="glyphicon"></span>View</button>
+</td>
+</tr>
+{{/each}}
+</table>
+  </div>
+    <script>
+  $(document).ready(function()
+{  
+	$('#search').keyup(function()
+	{
+		searchTable($(this).val());
+	});
+});
+
+function searchTable(inputVal)
+{
+
+	var table = $('#tblData');
+	table.find('tr').each(function(index, row)
+	{
+		var allCells = $(row).find('td');
+		if(allCells.length > 0)
+		{
+			var found = false;
+			allCells.each(function(index, td)
+			{
+				var regExp = new RegExp(inputVal, 'i');
+				if(regExp.test($(td).text()))
+				{
+					found = true;
+					return false;
+				}
+			});
+			if(found == true)$(row).show();else $(row).hide();
+		}
+	});
+}
+$('input[type = checkbox]').change(function () {
+    var valu = $(this).val();
+   // alert(valu);
+    var ischecked = $(this).is(":checked");
+    //alert(ischecked);
+
+    if( ischecked ){
+        $('.checkbox1').hide();
+	   $('.' + valu).show();
+    }else{
+        $('.checkbox1').show();
+    }
+  
+})
+ $(function() { 
+  $('input[type="checkbox"]').bind('click',function() {
+    $('input[type="checkbox"]').not(this).prop("checked", false);
+  });
+});
+
+$('.show').click(function(){
+    if($(this).prop('checked')){
+       
+    }else{
+    $('#three').prop('checked', true);
+    }
+});	
+
+
+ </script>
+  
+</template>
+<template name="filter">
+  <div class="float_right">
+     <label class="filt_lable">
+          <input type="checkbox"> All
+        </label>
+   <label class="filt_lable">
+          <input type="checkbox"> Pending
+        </label>
+      <label class="filt_lable">
+          <input type="checkbox"> Complete
+        </label>
+  </div>
+  
+ 
+</template>

@@ -1,0 +1,27 @@
+<template name="tabs">
+    <div style="clear:both"></div>
+    <div class="container">
+        
+        <h2 style="margin-top: 29px;margin-left:33%;">Joining Checklist of {{#each employee1}}{{eid}}/{{ename}}{{/each}} </h2>
+    </div>
+<div role="tabpanel"  >
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-pills tab1" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" id="home_bt">HR</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Documents</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">R&BD</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Network</a></li>
+  </ul>
+  <div class="container con">
+<div class="tab-content" style="overflow: hidden">
+  <div role="tabpanel" class="tab-pane fade in active" id="home">{{> hr}}</div>
+  <div role="tabpanel" class="tab-pane fade" id="profile">{{> document}}</div>
+  <div role="tabpanel" class="tab-pane fade" id="messages">{{> rbd}}</div>
+  <div role="tabpanel" class="tab-pane fade" id="settings">{{> network}}</div>
+</div>
+
+</div>
+</div>
+   
+</template>

@@ -1,0 +1,151 @@
+
+[1mStand back while Meteorite does its thing[22m
+
+[1mDone installing smart packages[22m
+
+[32mOk, everything's ready. Here comes Meteor![39m
+
+[[[[[ /var/www/html/zaviors/manisha/hrm ]]]]]
+
+=> Started proxy.
+=> Started MongoDB.
+=> Started your app.
+
+=> App running at: http://localhost:9600/
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)=> Client modified -- refreshing (x3)=> Client modified -- refreshing (x4)
+=> Errors prevented startup:
+   
+   While building the application:
+   client/views/home/Home.html:76: Expected space
+   ...put style="height:2%"; type="text" placeh...
+   ^
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+=> Meteor server restarted
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Client modified -- refreshing
+=> Server modified -- restarting...                                   => Exited with code: 8
+[34mW20150204-12:01:53.904(5.5)? (STDERR) [39m[35m[39m
+[34mW20150204-12:01:53.906(5.5)? (STDERR) [39m[35mError: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)[39m
+[34mW20150204-12:01:53.906(5.5)? (STDERR) [39m[35m    at Object.Future.wait (/home/acer/.meteor/packages/meteor-tool/.1.0.40.1ef5dzv++os.linux.x86_64+web.browser+web.cordova/meteor-tool-os.linux.x86_64/dev_bundle/server-lib/node_modules/fibers/future.js:326:15)[39m
+[34mW20150204-12:01:53.906(5.5)? (STDERR) [39m[35m    at Connection.mysqlMethods.queryEx (packages/numtel:mysql/lib/mysql.js:43:1)[39m
+[34mW20150204-12:01:53.905(5.5)? (STDERR) [39m[35m/home/acer/.meteor/packages/meteor-tool/.1.0.40.1ef5dzv++os.linux.x86_64+web.browser+web.cordova/meteor-tool-os.linux.x86_64/dev_bundle/server-lib/node_modules/fibers/future.js:206[39m
+[34mW20150204-12:01:53.906(5.5)? (STDERR) [39m[35m    at Connection.mysqlMethods.initUpdateTable (packages/numtel:mysql/lib/mysql.js:53:1)[39m
+[34mW20150204-12:01:53.906(5.5)? (STDERR) [39m[35m    at /var/www/html/zaviors/manisha/hrm/.meteor/local/build/programs/server/boot.js:212:5[39m
+[34mW20150204-12:01:53.906(5.5)? (STDERR) [39m[35m    - - - - -[39m
+[34mW20150204-12:01:53.906(5.5)? (STDERR) [39m[35m    at Meteor.methods.Inserthr1.query (app/server.js:16:8)[39m
+[34mW20150204-12:01:53.906(5.5)? (STDERR) [39m[35m    at Handshake.Sequence._packetToError (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/protocol/sequences/Sequence.js:48:14)[39m
+[34mW20150204-12:01:53.906(5.5)? (STDERR) [39m[35m    at Handshake.ErrorPacket (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/protocol/sequences/Handshake.js:101:18)[39m
+[34mW20150204-12:01:53.906(5.5)? (STDERR) [39m[35m    at Protocol._parsePacket (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/protocol/Protocol.js:271:23)[39m
+[34mW20150204-12:01:53.906(5.5)? (STDERR) [39m[35m    at Parser.write (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/protocol/Parser.js:77:12)[39m
+[34mW20150204-12:01:53.906(5.5)? (STDERR) [39m[35m    at Socket.<anonymous> (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/Connection.js:82:28)[39m
+[34mW20150204-12:01:53.906(5.5)? (STDERR) [39m[35m    at Socket.emit (events.js:95:17)[39m
+[34mW20150204-12:01:53.906(5.5)? (STDERR) [39m[35m						      ^[39m
+[34mW20150204-12:01:53.905(5.5)? (STDERR) [39m[35m						throw(ex);[39m
+[34mW20150204-12:01:53.906(5.5)? (STDERR) [39m[35m    at Socket.<anonymous> (_stream_readable.js:764:14)[39m
+[34mW20150204-12:01:53.906(5.5)? (STDERR) [39m[35m    at Socket.emit (events.js:92:17)[39m
+[34mW20150204-12:01:53.907(5.5)? (STDERR) [39m[35m    --------------------[39m
+[34mW20150204-12:01:53.907(5.5)? (STDERR) [39m[35m    at Protocol._enqueue (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/protocol/Protocol.js:135:48)[39m
+[34mW20150204-12:01:53.907(5.5)? (STDERR) [39m[35m    at Protocol.handshake (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/protocol/Protocol.js:52:41)[39m
+[34mW20150204-12:01:53.907(5.5)? (STDERR) [39m[35m    at Connection.connect (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/Connection.js:109:18)[39m
+[34mW20150204-12:01:53.906(5.5)? (STDERR) [39m[35m    at emitReadable_ (_stream_readable.js:426:10)[39m
+[34mW20150204-12:01:53.907(5.5)? (STDERR) [39m[35m    at Meteor.methods.Inserthr1.query (app/server.js:15:8)[39m
+[34mW20150204-12:01:53.907(5.5)? (STDERR) [39m[35m    at /var/www/html/zaviors/manisha/hrm/.meteor/local/build/programs/server/boot.js:212:5[39m
+[34mW20150204-12:01:53.906(5.5)? (STDERR) [39m[35m    at Protocol.write (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/protocol/Protocol.js:39:16)[39m
+[34mW20150204-12:01:56.379(5.5)? (STDERR) [39m[35m[39m
+[34mW20150204-12:01:56.380(5.5)? (STDERR) [39m[35m/home/acer/.meteor/packages/meteor-tool/.1.0.40.1ef5dzv++os.linux.x86_64+web.browser+web.cordova/meteor-tool-os.linux.x86_64/dev_bundle/server-lib/node_modules/fibers/future.js:206[39m
+[34mW20150204-12:01:56.380(5.5)? (STDERR) [39m[35m						throw(ex);[39m
+[34mW20150204-12:01:56.380(5.5)? (STDERR) [39m[35m						      ^[39m
+[34mW20150204-12:01:56.387(5.5)? (STDERR) [39m[35mError: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)[39m
+[34mW20150204-12:01:56.387(5.5)? (STDERR) [39m[35m    at Object.Future.wait (/home/acer/.meteor/packages/meteor-tool/.1.0.40.1ef5dzv++os.linux.x86_64+web.browser+web.cordova/meteor-tool-os.linux.x86_64/dev_bundle/server-lib/node_modules/fibers/future.js:326:15)[39m
+[34mW20150204-12:01:56.387(5.5)? (STDERR) [39m[35m    at Connection.mysqlMethods.queryEx (packages/numtel:mysql/lib/mysql.js:43:1)[39m
+[34mW20150204-12:01:56.387(5.5)? (STDERR) [39m[35m    at Connection.mysqlMethods.initUpdateTable (packages/numtel:mysql/lib/mysql.js:53:1)[39m
+[34mW20150204-12:01:56.387(5.5)? (STDERR) [39m[35m    at Meteor.methods.Inserthr1.query (app/server.js:16:8)[39m
+[34mW20150204-12:01:56.387(5.5)? (STDERR) [39m[35m    at /var/www/html/zaviors/manisha/hrm/.meteor/local/build/programs/server/boot.js:212:5[39m
+[34mW20150204-12:01:56.387(5.5)? (STDERR) [39m[35m    - - - - -[39m
+[34mW20150204-12:01:56.387(5.5)? (STDERR) [39m[35m    at Handshake.Sequence._packetToError (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/protocol/sequences/Sequence.js:48:14)[39m
+[34mW20150204-12:01:56.387(5.5)? (STDERR) [39m[35m    at Handshake.ErrorPacket (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/protocol/sequences/Handshake.js:101:18)[39m
+[34mW20150204-12:01:56.387(5.5)? (STDERR) [39m[35m    at Protocol._parsePacket (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/protocol/Protocol.js:271:23)[39m
+[34mW20150204-12:01:56.387(5.5)? (STDERR) [39m[35m    at Parser.write (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/protocol/Parser.js:77:12)[39m
+[34mW20150204-12:01:56.387(5.5)? (STDERR) [39m[35m    at Protocol.write (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/protocol/Protocol.js:39:16)[39m
+[34mW20150204-12:01:56.388(5.5)? (STDERR) [39m[35m    at Socket.<anonymous> (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/Connection.js:82:28)[39m
+[34mW20150204-12:01:56.388(5.5)? (STDERR) [39m[35m    at Socket.emit (events.js:95:17)[39m
+[34mW20150204-12:01:56.388(5.5)? (STDERR) [39m[35m    at Socket.<anonymous> (_stream_readable.js:764:14)[39m
+[34mW20150204-12:01:56.388(5.5)? (STDERR) [39m[35m    at Socket.emit (events.js:92:17)[39m
+[34mW20150204-12:01:56.390(5.5)? (STDERR) [39m[35m    at emitReadable_ (_stream_readable.js:426:10)[39m
+[34mW20150204-12:01:56.390(5.5)? (STDERR) [39m[35m    --------------------[39m
+[34mW20150204-12:01:56.390(5.5)? (STDERR) [39m[35m    at Protocol._enqueue (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/protocol/Protocol.js:135:48)[39m
+[34mW20150204-12:01:56.390(5.5)? (STDERR) [39m[35m    at Protocol.handshake (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/protocol/Protocol.js:52:41)[39m
+[34mW20150204-12:01:56.390(5.5)? (STDERR) [39m[35m    at Connection.connect (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/Connection.js:109:18)[39m
+[34mW20150204-12:01:56.390(5.5)? (STDERR) [39m[35m    at Meteor.methods.Inserthr1.query (app/server.js:15:8)[39m
+=> Exited with code: 8
+[34mW20150204-12:01:56.390(5.5)? (STDERR) [39m[35m    at /var/www/html/zaviors/manisha/hrm/.meteor/local/build/programs/server/boot.js:212:5[39m
+[34mW20150204-12:01:58.714(5.5)? (STDERR) [39m[35m[39m
+[34mW20150204-12:01:58.715(5.5)? (STDERR) [39m[35m/home/acer/.meteor/packages/meteor-tool/.1.0.40.1ef5dzv++os.linux.x86_64+web.browser+web.cordova/meteor-tool-os.linux.x86_64/dev_bundle/server-lib/node_modules/fibers/future.js:206[39m
+[34mW20150204-12:01:58.715(5.5)? (STDERR) [39m[35m						throw(ex);[39m
+[34mW20150204-12:01:58.715(5.5)? (STDERR) [39m[35m						      ^[39m
+[34mW20150204-12:01:58.722(5.5)? (STDERR) [39m[35mError: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'localhost' (using password: YES)[39m
+[34mW20150204-12:01:58.722(5.5)? (STDERR) [39m[35m    at Object.Future.wait (/home/acer/.meteor/packages/meteor-tool/.1.0.40.1ef5dzv++os.linux.x86_64+web.browser+web.cordova/meteor-tool-os.linux.x86_64/dev_bundle/server-lib/node_modules/fibers/future.js:326:15)[39m
+[34mW20150204-12:01:58.722(5.5)? (STDERR) [39m[35m    at Connection.mysqlMethods.queryEx (packages/numtel:mysql/lib/mysql.js:43:1)[39m
+[34mW20150204-12:01:58.722(5.5)? (STDERR) [39m[35m    at Connection.mysqlMethods.initUpdateTable (packages/numtel:mysql/lib/mysql.js:53:1)[39m
+[34mW20150204-12:01:58.722(5.5)? (STDERR) [39m[35m    at Meteor.methods.Inserthr1.query (app/server.js:16:8)[39m
+[34mW20150204-12:01:58.722(5.5)? (STDERR) [39m[35m    at /var/www/html/zaviors/manisha/hrm/.meteor/local/build/programs/server/boot.js:212:5[39m
+[34mW20150204-12:01:58.722(5.5)? (STDERR) [39m[35m    - - - - -[39m
+[34mW20150204-12:01:58.722(5.5)? (STDERR) [39m[35m    at Handshake.Sequence._packetToError (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/protocol/sequences/Sequence.js:48:14)[39m
+[34mW20150204-12:01:58.723(5.5)? (STDERR) [39m[35m    at Handshake.ErrorPacket (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/protocol/sequences/Handshake.js:101:18)[39m
+[34mW20150204-12:01:58.723(5.5)? (STDERR) [39m[35m    at Protocol._parsePacket (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/protocol/Protocol.js:271:23)[39m
+[34mW20150204-12:01:58.723(5.5)? (STDERR) [39m[35m    at Parser.write (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/protocol/Parser.js:77:12)[39m
+[34mW20150204-12:01:58.723(5.5)? (STDERR) [39m[35m    at Protocol.write (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/protocol/Protocol.js:39:16)[39m
+[34mW20150204-12:01:58.723(5.5)? (STDERR) [39m[35m    at Socket.<anonymous> (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/Connection.js:82:28)[39m
+[34mW20150204-12:01:58.723(5.5)? (STDERR) [39m[35m    at Socket.emit (events.js:95:17)[39m
+[34mW20150204-12:01:58.723(5.5)? (STDERR) [39m[35m    at Socket.<anonymous> (_stream_readable.js:764:14)[39m
+[34mW20150204-12:01:58.723(5.5)? (STDERR) [39m[35m    at Socket.emit (events.js:92:17)[39m
+[34mW20150204-12:01:58.723(5.5)? (STDERR) [39m[35m    at emitReadable_ (_stream_readable.js:426:10)[39m
+[34mW20150204-12:01:58.723(5.5)? (STDERR) [39m[35m    --------------------[39m
+[34mW20150204-12:01:58.723(5.5)? (STDERR) [39m[35m    at Protocol._enqueue (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/protocol/Protocol.js:135:48)[39m
+[34mW20150204-12:01:58.723(5.5)? (STDERR) [39m[35m    at Protocol.handshake (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/protocol/Protocol.js:52:41)[39m
+[34mW20150204-12:01:58.723(5.5)? (STDERR) [39m[35m    at Connection.connect (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/Connection.js:109:18)[39m
+[34mW20150204-12:01:58.723(5.5)? (STDERR) [39m[35m    at Meteor.methods.Inserthr1.query (app/server.js:15:8)[39m
+[34mW20150204-12:01:58.723(5.5)? (STDERR) [39m[35m    at /var/www/html/zaviors/manisha/hrm/.meteor/local/build/programs/server/boot.js:212:5[39m
+=> Exited with code: 8
+=> Your application is crashing. Waiting for file change.
+=> Modified -- restarting.
+=> Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)=> Client modified -- refreshing (x3)=> Client modified -- refreshing (x4)=> Client modified -- refreshing (x5)=> Client modified -- refreshing (x6)=> Client modified -- refreshing (x7)=> Client modified -- refreshing (x8)
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Server modified -- restarting...                                   => Meteor server restarted
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)=> Client modified -- refreshing (x3)=> Client modified -- refreshing (x4)=> Client modified -- refreshing (x5)=> Client modified -- refreshing (x6)=> Client modified -- refreshing (x7)=> Client modified -- refreshing (x8)=> Client modified -- refreshing (x9)
+=> Errors prevented startup:
+   
+   While building the application:
+   client/views/HR/hr.html:8: Expected space
+   ...le="margin-right: 3%";>�</button>     ple...
+   ^
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+=> Meteor server restarted
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)=> Client modified -- refreshing (x3)=> Client modified -- refreshing (x4)
+=> Errors prevented startup:
+   
+   While building the application:
+   client/views/network/network.html:373: Expected "div" end tag
+   ...if}}          </form>     </div>
+   ^
+   
+=> Your application has errors. Waiting for file change.
+=> Modified -- restarting.
+=> Meteor server restarted
+=> Client modified -- refreshing=> Client modified -- refreshing (x2)=> Client modified -- refreshing (x3)=> Client modified -- refreshing (x4)=> Client modified -- refreshing (x5)=> Client modified -- refreshing (x6)=> Client modified -- refreshing (x7)=> Client modified -- refreshing (x8)=> Client modified -- refreshing (x9)=> Client modified -- refreshing (x10)=> Client modified -- refreshing (x11)=> Client modified -- refreshing (x12)=> Client modified -- refreshing (x13)=> Client modified -- refreshing (x14)=> Client modified -- refreshing (x15)=> Client modified -- refreshing (x16)=> Client modified -- refreshing (x17)
+=> Exited with code: 8
+[34mW20150207-19:20:37.621(5.5)? (STDERR) [39m[35m[39m
+[34mW20150207-19:20:38.057(5.5)? (STDERR) [39m[35mError: Connection lost: The server closed the connection.[39m
+[34mW20150207-19:20:38.058(5.5)? (STDERR) [39m[35m    at Socket.emit (events.js:117:20)[39m
+[34mW20150207-19:20:38.058(5.5)? (STDERR) [39m[35m    at process._tickCallback (node.js:419:13)[39m
+[34mW20150207-19:20:38.058(5.5)? (STDERR) [39m[35m    at _stream_readable.js:943:16[39m
+[34mW20150207-19:20:38.057(5.5)? (STDERR) [39m[35m    at Protocol.end (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/protocol/Protocol.js:103:13)[39m
+[34mW20150207-19:20:38.057(5.5)? (STDERR) [39m[35m    at Socket.<anonymous> (/home/acer/.meteor/packages/numtel_mysql/.0.0.20.14ijyr4++os+web.browser+web.cordova/npm/node_modules/mysql/lib/Connection.js:88:28)[39m

@@ -1,0 +1,239 @@
+<template name="hr">
+
+    <div class="container">
+      
+        <form method="post" id="hr_form">
+            <div style="margin-top:1%;width:96%;">
+         <div class="alert alert-info" id="login-error" style="display:none;">
+    <button type="button" class="close" style="margin-right: 3%;">×</button>
+    please select Responsible Person
+</div>
+            </div>
+                      <div class="alert-messages text-center text-success">
+        </div>
+            <table class="hr_table">
+                {{hrval}}
+                {{#if hrdocs}} 
+                  {{#each hrdocs}}
+         
+                  
+            <tr>
+                <td>
+                    Responsible Person :
+                </td>
+                <td >
+                    
+                    <select style="margin-left:-90%;" class="form-control" placeholder="select employee name" id="res_name" >
+                        <option value="">
+                            select Responsible Person
+                        </option>
+                        {{#each employee}}
+                        <option {{isMyoptionSelected ename ../res_person}}>
+                            {{ename}}
+                        </option>
+                        {{/each}}
+                    </select>
+                 
+                </td>
+            </tr>
+       
+          <tr>
+                <td>
+                    
+                    Updated Employee Information Sheet ?
+                </td>
+                <td>
+                <div class="col-xs-3 col-sm-2 col-md-2">
+                 <div class="onoffswitch">
+                 <input class="onoffswitch-checkbox" type="checkbox" name="Answer1" {{isMyCheckboxChecked ans1}} id="empInfoSheet">
+                 <label class="onoffswitch-label" for="empInfoSheet">
+                 <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+
+
+                </td>
+          </tr>
+            <tr>
+                <td>
+                    Added to Address Book from list of MSS ?
+                </td>
+                <td>
+                <div class="col-xs-3 col-sm-2 col-md-2">
+                 <div class="onoffswitch">
+                  <input class="onoffswitch-checkbox"  type="checkbox" name="Answer2" {{isMyCheckboxChecked ans2}} id="Address">
+                  <label class="onoffswitch-label" for="Address">
+                 <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+          </tr>
+                <tr>
+                <td>
+                    
+                    Added to Biometric System ?
+                </td>
+                <td>
+                     <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                    <input class="onoffswitch-checkbox"  type="checkbox" name="Answer3" {{isMyCheckboxChecked ans3}} id="Biometric">
+                        <label class="onoffswitch-label" for="Biometric">
+                 <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+          </tr>
+                    <tr>
+                <td>
+                    MSS-Team Folder Updated ?
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                    <div class="onoffswitch">
+                     <input class="onoffswitch-checkbox" type="checkbox" name="Answer4" {{isMyCheckboxChecked ans4}} id="Folder">
+                        <label class="onoffswitch-label" for="Folder">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+          </tr>
+                    <tr>
+                        {{#each employee1}}
+                         <td><input type="hidden" value="{{eid}}" id="empid"></td>
+            
+                       {{/each}}
+                     </tr>
+ 
+   
+                   
+                    <tr>
+                    
+                        <td></td>
+                        
+                        <td><input type="submit" class="btn btn-info btn-lg save" value="save" id="submit"></td>
+                        <td><!--<a herf="../"><button  type="button" class="btn btn-info btn-lg back">back</button></a>-->
+                        <a href="../"><button type="button" class="btn btn-info btn-lg back ">back</button></a>
+                        </td>
+                    </tr>
+                     {{/each}}
+                     {{else}}
+                     
+                    <tr>
+                <td>
+                    Responsible Person :
+                </td>
+                <td>
+                    
+                    <select style="margin-left:-101%;" class="form-control" placeholder="select employee name" id="res_name" >
+                        <option  value="">
+                            select employee name
+                        </option>
+                        {{#each employee}}
+                        <option {{isMyoptionSelected ename ../res_person}}>
+                            {{ename}}
+                        </option>
+                        {{/each}}
+                    </select>
+                 
+                </td>
+            </tr>
+       
+          <tr>
+                <td>
+                    Updated Employee Information Sheet ?
+                </td>
+                <td>
+                  <div class="col-xs-3 col-sm-2 col-md-2">
+                 <div class="onoffswitch">
+            
+                <input class="onoffswitch-checkbox" type="checkbox" name="Answer1" id="empInfoSheet">
+                     <label class="onoffswitch-label" for="empInfoSheet">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+            
+                </td>
+          </tr>
+            <tr>
+                <td>
+                    Added to Address Book from list of MSS ?
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                 <div class="onoffswitch">
+                  <input class="onoffswitch-checkbox" type="checkbox" name="Answer2" id="Address" >
+                     <label class="onoffswitch-label" for="Address">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+          </tr>
+                <tr>
+                <td>
+                    Added to Biometric System ?
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                 <div class="onoffswitch">
+    <input class="onoffswitch-checkbox" type="checkbox" name="Answer3" id="Biometric">
+         <label class="onoffswitch-label" for="Biometric">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+          </tr>
+                    <tr>
+                <td>
+                    MSS-Team Folder Updated ?
+                </td>
+                <td>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                 <div class="onoffswitch">
+                     <input class="onoffswitch-checkbox" type="checkbox" name="Answer4" id="Folder">
+                         <label class="onoffswitch-label" for="Folder">
+                         <span class="onoffswitch-inner"></span>
+                 <span class="onoffswitch-switch"></span>
+                </label>
+                 </div>
+                 </div>
+                </td>
+          </tr>
+                    <tr>
+                        {{#each employee1}}
+                         <td><input type="hidden" value="{{eid}}" id="empid"></td>
+                       {{/each}}
+                     </tr>
+ 
+   
+                   
+                    <tr>
+                    
+                        <td></td>
+                       <td><input type="submit" class="btn btn-info btn-lg save" value="save" id="submit"></td>
+                        <td><!--<a herf="../"><button  type="button" class="btn btn-info btn-lg back">back</button></a>-->
+                        <a href="../"><button type="button" class="btn btn-info btn-lg back ">back</button></a>
+                        </td>
+                    </tr>
+                {{/if}}
+                     
+                     
+        </table>
+            
+        </form>
+    </div>
+
+</template>
